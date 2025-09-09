@@ -1,5 +1,5 @@
 {% set name = "radicli" %}
-{% set version = "0.0.25" %}
+{% set version = "0.0.26" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/radicli-{{ version }}.tar.gz
-  sha256: 71b1917ab0f1c565e1ae9a830dff0061dab205de093f1329721935c239b8fe7a
+  sha256: 81c8c186b4c5785f7504e13d7d524ccb86de604adf06131ca64b817f41c76a99
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
